@@ -18,7 +18,6 @@
 		2BAA8DA11CFCB4A900461DFC /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAA8DA01CFCB4A900461DFC /* MainTabBarController.swift */; };
 		2BAA8DA51CFCB7C800461DFC /* WordSelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAA8DA41CFCB7C800461DFC /* WordSelectionTableViewController.swift */; };
 		2BAA8DAA1CFCBB9400461DFC /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2BAA8DA81CFCBB9400461DFC /* DataModel.xcdatamodeld */; };
-		2BAA8DB51CFCC72F00461DFC /* Word+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAA8DAB1CFCC72F00461DFC /* Word+CoreDataProperties.swift */; };
 		2BAA8DB61CFCC72F00461DFC /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAA8DAC1CFCC72F00461DFC /* Word.swift */; };
 		2BAA8DB71CFCC72F00461DFC /* Recording+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAA8DAD1CFCC72F00461DFC /* Recording+CoreDataProperties.swift */; };
 		2BAA8DB81CFCC72F00461DFC /* Recording.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAA8DAE1CFCC72F00461DFC /* Recording.swift */; };
@@ -31,8 +30,9 @@
 		2BAA8DC21CFCC7E700461DFC /* Memcache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAA8DC11CFCC7E700461DFC /* Memcache.swift */; };
 		2BAA8DC41CFCC93900461DFC /* WordSelectionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAA8DC31CFCC93900461DFC /* WordSelectionPresenter.swift */; };
 		2BAA8DC61CFCE96400461DFC /* SimplePopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAA8DC51CFCE96400461DFC /* SimplePopup.swift */; };
-		2BAA8DC91CFD074800461DFC /* Translation+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAA8DC71CFD074800461DFC /* Translation+CoreDataProperties.swift */; };
 		2BAA8DCA1CFD074800461DFC /* Translation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAA8DC81CFD074800461DFC /* Translation.swift */; };
+		2BAA8DCF1CFD120200461DFC /* Word+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAA8DCD1CFD120200461DFC /* Word+CoreDataProperties.swift */; };
+		2BAA8DD01CFD120200461DFC /* Translation+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAA8DCE1CFD120200461DFC /* Translation+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,7 +70,6 @@
 		2BAA8DA01CFCB4A900461DFC /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		2BAA8DA41CFCB7C800461DFC /* WordSelectionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordSelectionTableViewController.swift; sourceTree = "<group>"; };
 		2BAA8DA91CFCBB9400461DFC /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
-		2BAA8DAB1CFCC72F00461DFC /* Word+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Word+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2BAA8DAC1CFCC72F00461DFC /* Word.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		2BAA8DAD1CFCC72F00461DFC /* Recording+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Recording+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2BAA8DAE1CFCC72F00461DFC /* Recording.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recording.swift; sourceTree = "<group>"; };
@@ -83,8 +82,9 @@
 		2BAA8DC11CFCC7E700461DFC /* Memcache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Memcache.swift; sourceTree = "<group>"; };
 		2BAA8DC31CFCC93900461DFC /* WordSelectionPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordSelectionPresenter.swift; sourceTree = "<group>"; };
 		2BAA8DC51CFCE96400461DFC /* SimplePopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimplePopup.swift; sourceTree = "<group>"; };
-		2BAA8DC71CFD074800461DFC /* Translation+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Translation+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2BAA8DC81CFD074800461DFC /* Translation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Translation.swift; sourceTree = "<group>"; };
+		2BAA8DCD1CFD120200461DFC /* Word+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Word+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2BAA8DCE1CFD120200461DFC /* Translation+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Translation+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,7 +230,7 @@
 		2BAA8DA21CFCB6A700461DFC /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				2BAA8DAB1CFCC72F00461DFC /* Word+CoreDataProperties.swift */,
+				2BAA8DCD1CFD120200461DFC /* Word+CoreDataProperties.swift */,
 				2BAA8DAC1CFCC72F00461DFC /* Word.swift */,
 				2BAA8DAD1CFCC72F00461DFC /* Recording+CoreDataProperties.swift */,
 				2BAA8DAE1CFCC72F00461DFC /* Recording.swift */,
@@ -240,7 +240,7 @@
 				2BAA8DB21CFCC72F00461DFC /* Language.swift */,
 				2BAA8DB31CFCC72F00461DFC /* User+CoreDataProperties.swift */,
 				2BAA8DB41CFCC72F00461DFC /* User.swift */,
-				2BAA8DC71CFD074800461DFC /* Translation+CoreDataProperties.swift */,
+				2BAA8DCE1CFD120200461DFC /* Translation+CoreDataProperties.swift */,
 				2BAA8DC81CFD074800461DFC /* Translation.swift */,
 			);
 			name = Models;
@@ -404,18 +404,18 @@
 				2BAA8DA51CFCB7C800461DFC /* WordSelectionTableViewController.swift in Sources */,
 				2BAA8DB61CFCC72F00461DFC /* Word.swift in Sources */,
 				2BAA8D6E1CFCAE7100461DFC /* SecondViewController.swift in Sources */,
+				2BAA8DCF1CFD120200461DFC /* Word+CoreDataProperties.swift in Sources */,
 				2BAA8DBC1CFCC72F00461DFC /* Language.swift in Sources */,
 				2BAA8DBE1CFCC72F00461DFC /* User.swift in Sources */,
-				2BAA8DC91CFD074800461DFC /* Translation+CoreDataProperties.swift in Sources */,
 				2BAA8DC41CFCC93900461DFC /* WordSelectionPresenter.swift in Sources */,
 				2BAA8DC21CFCC7E700461DFC /* Memcache.swift in Sources */,
 				2BAA8DB91CFCC72F00461DFC /* Phrase+CoreDataProperties.swift in Sources */,
 				2BAA8DA11CFCB4A900461DFC /* MainTabBarController.swift in Sources */,
-				2BAA8DB51CFCC72F00461DFC /* Word+CoreDataProperties.swift in Sources */,
 				2BAA8DCA1CFD074800461DFC /* Translation.swift in Sources */,
 				2BAA8DBA1CFCC72F00461DFC /* Phrase.swift in Sources */,
 				2BAA8DBD1CFCC72F00461DFC /* User+CoreDataProperties.swift in Sources */,
 				2BAA8DAA1CFCBB9400461DFC /* DataModel.xcdatamodeld in Sources */,
+				2BAA8DD01CFD120200461DFC /* Translation+CoreDataProperties.swift in Sources */,
 				2BAA8DBB1CFCC72F00461DFC /* Language+CoreDataProperties.swift in Sources */,
 				2BAA8DB71CFCC72F00461DFC /* Recording+CoreDataProperties.swift in Sources */,
 				2BAA8D6A1CFCAE7100461DFC /* AppDelegate.swift in Sources */,

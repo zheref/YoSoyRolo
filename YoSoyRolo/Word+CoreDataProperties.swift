@@ -18,5 +18,7 @@ extension Word {
     @NSManaged var creator: User?
     @NSManaged var recording: Recording?
     @NSManaged var language: Language?
+    @NSManaged var translateDestinations: Translation?
+    @NSManaged var translateOrigins: Translation?
 
 }

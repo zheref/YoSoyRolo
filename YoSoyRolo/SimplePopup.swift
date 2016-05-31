@@ -26,40 +26,32 @@ internal class SimplePopup {
     }
     
     internal static func alert(message: String, withTitle title: String, from vm: UIViewController) {
-        if #available(iOS 8.0, *) {
-            let alert: UIAlertController = UIAlertController(title: title, message: message,
-                                                             preferredStyle: UIAlertControllerStyle.Alert)
-            
-            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default,
-                handler: { (action: UIAlertAction) -> Void in
-                    // Do nothing. Just dismiss
-            }))
-            
-            vm.presentViewController(alert, animated: true, completion: nil)
-        } else {
-            // Fallback on earlier versions
-        }
+        let alert: UIAlertController = UIAlertController(title: title, message: message,
+                                                         preferredStyle: UIAlertControllerStyle.Alert)
+        
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default,
+            handler: { (action: UIAlertAction) -> Void in
+                // Do nothing. Just dismiss
+        }))
+        
+        vm.presentViewController(alert, animated: true, completion: nil)
     }
     
     internal static func confirm(message: String, withTitle title: String, from vm: UIViewController, ifYes doThis: () -> Void) {
-        if #available(iOS 8.0, *) {
-            let confirmation: UIAlertController = UIAlertController(title: title, message: message,
-                                                                    preferredStyle: UIAlertControllerStyle.Alert)
-            
-            confirmation.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.Default,
-                handler: { (action: UIAlertAction) -> Void in
-                    doThis();
-                }
-                ))
-            
-            confirmation.addAction(UIAlertAction(title: "No", style: UIAlertActionStyle.Cancel,
-                handler: { (action: UIAlertAction) -> Void in
-                    // Do nothing. Just dismiss
-                }
-                ))
-        } else {
-            // Fallback on earlier versions
-        }
+        let confirmation: UIAlertController = UIAlertController(title: title, message: message,
+                                                                preferredStyle: UIAlertControllerStyle.Alert)
+        
+        confirmation.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.Default,
+            handler: { (action: UIAlertAction) -> Void in
+                doThis();
+            }
+            ))
+        
+        confirmation.addAction(UIAlertAction(title: "No", style: UIAlertActionStyle.Cancel,
+            handler: { (action: UIAlertAction) -> Void in
+                // Do nothing. Just dismiss
+            }
+            ))
     }
     
 }
