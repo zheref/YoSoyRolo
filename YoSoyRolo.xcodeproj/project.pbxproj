@@ -33,6 +33,7 @@
 		2BAA8DCA1CFD074800461DFC /* Translation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAA8DC81CFD074800461DFC /* Translation.swift */; };
 		2BAA8DCF1CFD120200461DFC /* Word+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAA8DCD1CFD120200461DFC /* Word+CoreDataProperties.swift */; };
 		2BAA8DD01CFD120200461DFC /* Translation+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAA8DCE1CFD120200461DFC /* Translation+CoreDataProperties.swift */; };
+		2BAA8DD21CFD137500461DFC /* TranslationRecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAA8DD11CFD137500461DFC /* TranslationRecordingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		2BAA8DC81CFD074800461DFC /* Translation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Translation.swift; sourceTree = "<group>"; };
 		2BAA8DCD1CFD120200461DFC /* Word+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Word+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2BAA8DCE1CFD120200461DFC /* Translation+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Translation+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2BAA8DD11CFD137500461DFC /* TranslationRecordingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslationRecordingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +193,7 @@
 			children = (
 				2BAA8D6B1CFCAE7100461DFC /* RecordNavController.swift */,
 				2BAA8DA41CFCB7C800461DFC /* WordSelectionTableViewController.swift */,
+				2BAA8DD11CFD137500461DFC /* TranslationRecordingViewController.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -403,6 +406,7 @@
 			files = (
 				2BAA8DA51CFCB7C800461DFC /* WordSelectionTableViewController.swift in Sources */,
 				2BAA8DB61CFCC72F00461DFC /* Word.swift in Sources */,
+				2BAA8DD21CFD137500461DFC /* TranslationRecordingViewController.swift in Sources */,
 				2BAA8D6E1CFCAE7100461DFC /* SecondViewController.swift in Sources */,
 				2BAA8DCF1CFD120200461DFC /* Word+CoreDataProperties.swift in Sources */,
 				2BAA8DBC1CFCC72F00461DFC /* Language.swift in Sources */,

@@ -13,6 +13,7 @@ internal class WordSelectionTableViewController : UITableViewController, UISearc
     // MARK: - LOCAL CONSTANTS
     
     let REUSE_CELL_IDENTIFIER = "WordSuggestionCell"
+    let WORD_SELECTION_TO_TRANSLATION_RECORDING_SEGUE = "WordSelectionToTranslationRecording"
     
     // MARK: - OUTLETS
     
@@ -21,6 +22,8 @@ internal class WordSelectionTableViewController : UITableViewController, UISearc
     private var _searchController: UISearchController?
     
     private var _presenter: IWordSelectionPresenter
+    
+    private var _lastSelectedWord: String?
     
     // MARK: - INITIALIZERS
     
@@ -36,6 +39,18 @@ internal class WordSelectionTableViewController : UITableViewController, UISearc
     {
         super.viewDidLoad()
         self.setup()
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == WORD_SELECTION_TO_TRANSLATION_RECORDING_SEGUE {
+            if let controller = segue.destinationViewController as? TranslationRecordingViewController {
+                if let lastSelectedWord = _lastSelectedWord {
+                    controller.inject(word: lastSelectedWord)
+                } else {
+                    SimplePopup.alert("ERROR 111", from: self)
+                }
+            }
+        }
     }
     
     // MARK: - ROUTINES
@@ -174,10 +189,13 @@ internal class WordSelectionTableViewController : UITableViewController, UISearc
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
         let completeSource = self.getCompleteSource()
-        
         let selection = completeSource[indexPath.row]
-        SimplePopup.alert(selection, from: self)
+        
         tableView.deselectRowAtIndexPath(indexPath, animated: false)
+        
+        _lastSelectedWord = selection
+        self.performSegueWithIdentifier(WORD_SELECTION_TO_TRANSLATION_RECORDING_SEGUE,
+                                        sender: self)
     }
     
 }

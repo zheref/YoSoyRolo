@@ -74,7 +74,7 @@
         <scene sceneID="Vp6-F7-dDj">
             <objects>
                 <tableViewController title="What word to record?" id="wn8-5J-Wot" customClass="WordSelectionTableViewController" customModule="YoSoyRolo" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="E1i-eZ-Jo5">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="E1i-eZ-Jo5">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -103,11 +103,37 @@
                             <outlet property="delegate" destination="wn8-5J-Wot" id="7mc-JV-JlV"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Word to Record" id="Zp1-t2-p53"/>
+                    <navigationItem key="navigationItem" title="Word to Record" id="Zp1-t2-p53">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="S3J-rR-hnq"/>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="DeG-XA-2pT" kind="show" identifier="WordSelectionToTranslationRecording" id="7r5-7x-RnC"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T1g-nZ-kDN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1557" y="-318"/>
+        </scene>
+        <!--Translation for 'Word'-->
+        <scene sceneID="1W1-mD-3Ta">
+            <objects>
+                <viewController title="Translation for 'Word'" id="DeG-XA-2pT" customClass="TranslationRecordingViewController" customModule="YoSoyRolo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1pJ-PW-5cE"/>
+                        <viewControllerLayoutGuide type="bottom" id="Z4Y-XT-bad"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="g2a-gk-dpz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Translation for 'Word'" id="Ch4-Hw-B2m">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="tBO-qC-gbw"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AAw-YC-l6p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2420" y="-318"/>
         </scene>
     </scenes>
     <resources>
