@@ -81,6 +81,19 @@ internal class WordSelectionTableViewController : UITableViewController, UISearc
         return view
     }
     
+    private func getCompleteSource() -> [String]
+    {
+        var completeSource: [String] = []
+        
+        if let keywords = _searchController?.searchBar.text {
+            completeSource.append(keywords)
+        }
+        
+        completeSource += _presenter.suggestions
+        
+        return completeSource
+    }
+    
     // MARK: - UISEARCHRESULTSUPDATING
     
     internal func updateSearchResultsForSearchController(searchController: UISearchController)
@@ -98,6 +111,12 @@ internal class WordSelectionTableViewController : UITableViewController, UISearc
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         var sectionsCounter = 0
         
+        if let keywords = _searchController?.searchBar.text {
+            if keywords.characters.count > 0 {
+                sectionsCounter += 1
+            }
+        }
+        
         if _presenter.suggestions.count > 0 {
             sectionsCounter += 1
         }
@@ -106,16 +125,27 @@ internal class WordSelectionTableViewController : UITableViewController, UISearc
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return _presenter.suggestions.count
+        switch (section) {
+        case 0:
+            return 1
+        case 1:
+            return _presenter.suggestions.count
+        case 2:
+            return 0
+        default:
+            return 0
+        }
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath)
         -> UITableViewCell
     {
+        let completeSource = self.getCompleteSource()
+        
         let cell = tableView.dequeueReusableCellWithIdentifier(REUSE_CELL_IDENTIFIER,
                                                                forIndexPath: indexPath)
         
-        let suggestion = _presenter.suggestions[indexPath.row]
+        let suggestion = completeSource[indexPath.row]
         cell.textLabel?.text = suggestion
         
         return cell
@@ -125,9 +155,12 @@ internal class WordSelectionTableViewController : UITableViewController, UISearc
     {
         switch (section) {
         case 0:
-            let view = createSectionHeaderWithText("MAYBE YOU MEANT...")
+            let view = createSectionHeaderWithText("CONTINUE WITH...")
             return view
         case 1:
+            let view = createSectionHeaderWithText("MAYBE YOU MEANT...")
+            return view
+        case 2:
             let label = UILabel()
             label.text = "Or you might have forgotten..."
             return label
@@ -140,8 +173,10 @@ internal class WordSelectionTableViewController : UITableViewController, UISearc
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
-        let suggestion = _presenter.suggestions[indexPath.row]
-        SimplePopup.alert(suggestion, from: self)
+        let completeSource = self.getCompleteSource()
+        
+        let selection = completeSource[indexPath.row]
+        SimplePopup.alert(selection, from: self)
         tableView.deselectRowAtIndexPath(indexPath, animated: false)
     }
     
