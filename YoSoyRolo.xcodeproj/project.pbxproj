@@ -173,6 +173,7 @@
 				2BAA8D9C1CFCB40500461DFC /* Record */,
 				2BAA8D9D1CFCB41700461DFC /* Remember */,
 				2BAA8D9E1CFCB41E00461DFC /* Account */,
+				2BAA8DD41CFD1EE100461DFC /* Components */,
 				2BAA8D721CFCAE7100461DFC /* Assets.xcassets */,
 			);
 			name = Presentation;
@@ -181,6 +182,7 @@
 		2BAA8D9A1CFCAE8F00461DFC /* Business */ = {
 			isa = PBXGroup;
 			children = (
+				2BAA8DD31CFD198200461DFC /* API */,
 				2BAA8DA81CFCBB9400461DFC /* DataModel.xcdatamodeld */,
 				2BAA8DA21CFCB6A700461DFC /* Models */,
 				2BAA8DA71CFCB9E500461DFC /* Records */,
@@ -273,6 +275,28 @@
 			name = Helpers;
 			sourceTree = "<group>";
 		};
+		2BAA8DD31CFD198200461DFC /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		2BAA8DD41CFD1EE100461DFC /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				2BAA8DD51CFD1EEC00461DFC /* AudioRecorderView */,
+			);
+			name = Components;
+			sourceTree = "<group>";
+		};
+		2BAA8DD51CFD1EEC00461DFC /* AudioRecorderView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = AudioRecorderView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -341,6 +365,7 @@
 				TargetAttributes = {
 					2BAA8D651CFCAE7000461DFC = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = AQUE4FE98B;
 					};
 					2BAA8D7B1CFCAE7100461DFC = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -569,11 +594,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = YoSoyRolo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.zheref.YoSoyRolo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -581,11 +609,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = YoSoyRolo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.zheref.YoSoyRolo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
